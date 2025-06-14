@@ -3,51 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Poem Generator</title>
-    <link rel="stylesheet" href="src/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>AI Poem Generator</title>
+    <style>
+      .Typewriter__cursor {
+        -webkit-animation: Typewriter-cursor 1s infinite;
+        animation: Typewriter-cursor 1s infinite;
+        margin-left: 1px;
+      }
+      @-webkit-keyframes Typewriter-cursor {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes Typewriter-cursor {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <header>
         <h1>AI Poem Generator</h1>
       </header>
-      <main>
-        <div class="form-wrapper">
-          <form id="poem-generator-form">
-            <input
-              type="text"
-              placeholder="Enter topic of choice"
-              required=""
-              autofocus=""
-              autocomplete="off"
-              class="instructions"
-              id="instructions-input"
-            />
-            <input type="submit" class="submit-button" />
-          </form>
-          <div class="hint">i.e People,Places, Nature or Animals</div>
-        </div>
-        <div class="poem hidden" id="poem"></div>
-      </main>
-      <footer>
-        This AI project was coded by
-        <a href="https://github.com/ziyandadavashe" target="_blank"
-          >Ziyanda Davashe</a
-        >
-        an
-        <a
-          href="https://github.com/ziyandadavashe/ai-poem-generator-project"
-          target="_blank"
-          >open-sourced on GitHub</a
-        >
-        &
-        <a href="https://warm-hummingbird-110ccd.netlify.app/" target="blank">
-          hosted on Netlify</a
-        >
-      </footer>
+      <div class="form-container">
+        <form id="poem-generator">
+          <input
+            type="text"
+            id="instructions"
+            autofocus=""
+            class="instructions"
+            required=""
+            placeholder="Enter the topic of the poem?"
+            autocomplete="off"
+          />
+          <input
+            type="submit"
+            value="Generate Poem"
+            class="btn"
+            id="submit-button"
+          />
+        </form>
+        <div class="hint">i.e: Flower, Paris or Cheese</div>
+      </div>
+      <div id="poem" class="poem">
+        <span class="Typewriter__wrapper">
+          SheCodes, a community strong and bright,<br />
+          Women learning to code, taking flight.,<br />
+          With determination and support in sight,,<br />
+          Together we shine, in love for tech we unite.,<br />
+          <strong>SheCodes AI</strong> </span
+        ><span class="Typewriter__cursor">|</span>
+      </div>
     </div>
-    <script src="src/index.js"></script>
+
+    <footer>
+      This AI project was coded by
+      <a href="https://github.com/ziyandadavashe" target="_blank"></a> and is
+      <a
+        href="https://github.com/ziyandadavashe/ai-poem-generator-project"
+        target="_blank"
+      >
+        open-sourced on GitHub</a
+      >
+      and is
+      <a href="https://warm-hummingbird-110ccd.netlify.app/" target="_blank"
+        >hosted on Netlify</a
+      >
+    </footer>
+    <script src="./main.js"></script>
   </body>
 </html>
