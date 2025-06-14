@@ -3,97 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <title>AI Poem Generator</title>
+    <link rel="stylesheet" href="src/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
-
-    <style>
-      .Typewriter__cursor {
-        -webkit-animation: Typewriter-cursor 1s infinite;
-        animation: Typewriter-cursor 1s infinite;
-        margin-left: 1px;
-      }
-      @-webkit-keyframes Typewriter-cursor {
-        0% {
-          opacity: 0;
-        }
-        50% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-      @keyframes Typewriter-cursor {
-        0% {
-          opacity: 0;
-        }
-        50% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-    </style>
-    <title>AI South African Poem Generator</title>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>AI South African Poem Generator</h1>
+        <h1>AI Poem Generator</h1>
       </header>
-
       <main>
-        <div class="poem-container">
-          <form id="poetry-generator-form">
+        <div class="form-wrapper">
+          <form id="poem-generator-form">
             <input
               type="text"
-              placeholder="Enter the topic of your choice"
-              autofocus=""
+              placeholder="Enter topic of choice"
               required=""
+              autofocus=""
               autocomplete="off"
-              class="form-entry"
-              id="user-form-entry"
+              class="instructions"
+              id="instructions-input"
             />
             <input type="submit" class="submit-button" />
           </form>
-          <div class="example">i.e: culture, nature, Cape Town</div>
+          <div class="hint">i.e People,Places, Nature or Animals</div>
         </div>
-
-        <div class="poetry" id="poetry">
-          <span class="Typewriter__wrapper"
-            ><p>
-              In fields of gold where sunflowers dance,<br />
-              Calloused hands hold dreams, give life a chance.<br />
-              From ancient crafts to modern art's command,<br />
-              The pulse of history flows through every hand.
-            </p></span
-          ><span class="Typewriter__cursor"></span>
-        </div>
+        <div class="poem hidden" id="poem"></div>
       </main>
-
       <footer>
         This AI project was coded by
         <a href="https://github.com/ziyandadavashe" target="_blank"
-          >Lona Hlongwana</a
+          >Ziyanda Davashe</a
         >
-        and is
+        an
         <a
           href="https://github.com/ziyandadavashe/ai-poem-generator-project"
           target="_blank"
           >open-sourced on GitHub</a
         >
-        and is also
-        <a
-          href="https://ai-south-african-poetry-generator.netlify.app"
-          target="blank"
-        >
+        &
+        <a href="https://warm-hummingbird-110ccd.netlify.app/" target="blank">
           hosted on Netlify</a
         >
       </footer>
     </div>
-
-    <script src="index.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
